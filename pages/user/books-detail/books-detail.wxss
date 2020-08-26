@@ -1,0 +1,89 @@
+page {
+    background-color: #fff;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.books {
+    width: 100%;
+    height: 130px;
+    margin-top: 10px;
+    padding: 20rpx;
+    border-bottom: 1px solid #ccc;
+}
+
+.book-pic {
+    float: left;
+    height: 130rpx;
+    width: 100px;
+}
+
+.book-image {
+    width: 90px;
+    height: 130px;
+    margin-left: 10px;
+    background: #0099CC;
+    font-size: 26rpx;
+    border-radius: 5px;
+    position: relative;
+}
+
+.book-image text {
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+
+.book-msg {
+    float: left;
+    height: 130px;
+    padding: 5px 0;
+    margin-left: 10px;
+    font-size: 26rpx;
+}
+
+.book-msg view {
+    padding: 10rpx;
+}
+
+.book-name {
+    font-size: 26rpx;
+    color: #0099CC;
+}
+
+.introduce,.afterRead {
+    padding: 20rpx;
+}
+
+.intro,.userName {
+    margin-left: 40rpx;
+    font-size: 27rpx;
+}
+
+.afterRead-list {
+    height: 50vh;
+    border: 1px dashed #ccc;
+    background: #acece2;
+    border-radius: 10px;
+}
+
+.user {
+    margin-bottom: 20rpx;
+}
+
+.content {
+    font-size: 27rpx;
+}
+
+.borrowBtn {
+    margin: 20rpx;
+    background: #00c9a9;
+    color: #fff;
+}

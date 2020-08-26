@@ -1,0 +1,20 @@
+<view class="main-container">
+    <view class="user-container">
+        <view class="userAvatar">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class="userNick">{{userInfo.nickName}}</view>
+    </view>
+    <view class="set-container">
+        <view bindtap="userHistoryBtn" class="set-card">
+            <image src="/images/setting/history.png"></image>
+            <view class="name">借阅动态</view>
+            <view class="arrow">></view>
+        </view>
+        <view bindtap="exitBtnOnClick" class="set-card">
+            <image src="/images/setting/exit.png"></image>
+            <view class="name">退出登录</view>
+            <view class="arrow">></view>
+        </view>
+    </view>
+</view>

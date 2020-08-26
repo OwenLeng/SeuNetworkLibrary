@@ -1,0 +1,16 @@
+<view class="container">
+    <text class="errorMsg" wx:if="{{errorStatus}}">用户名或密码输入有误</text>
+    <view class="formContainer">
+        <form bindsubmit="formSubmit">
+            <view class="usernameContainer">
+                <image src="/images/login/login-user.png"></image>
+                <input name="username" placeholder="用户名" type="text"></input>
+            </view>
+            <view class="passwordContainer">
+                <image src="/images/login/login-password.png"></image>
+                <input name="password" placeholder="密码" type="password"></input>
+            </view>
+            <button class="loginBtn" formType="submit">登  录</button>
+        </form>
+    </view>
+</view>

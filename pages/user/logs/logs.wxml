@@ -1,0 +1,10 @@
+<view class="containerOne">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <button bindgetuserinfo="handleGetUserInfo" openType="getUserInfo" style="display:{{isShow?'block':'none'}}">获取用户登录信息</button>
+    <input bindinput="bindInput" class="black" name="nickName" placeholder="请输入姓名" style="display:{{ifInput?'none':'block'}}"></input>
+    <input bindinput="bindInputPassword" class="black" name="password" password="true" placeholder="请输入密码" style="display:{{ifInput?'none':'block'}}"></input>
+    <text class="userName">hello {{nameInput}}</text>
+    <view bindtap="handleClick" class="goStudy">
+        <text>走进LibrarySEU</text>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="main">
+    <view class="content">
+        <view bindtap="gotoMicbooks" class="app-cell">用户</view>
+        <view bindtap="gotoManagement" class="app-cell">管理员</view>
+    </view>
+</view>

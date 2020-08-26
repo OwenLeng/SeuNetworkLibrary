@@ -1,0 +1,6 @@
+<view class="main-container">
+    <view class="card" wx:for="{{history}}" wx:for-item="h" wx:key="{{h.BorrowTime + index}}">
+        <view>{{h.BorrowTime}}: 《{{h.bookname}}》</view>
+    </view>
+    <view style="color:#666; font-size:32rpx; text-align:center; margin-top:100px;" wx:if="{{hasData}}">暂无借阅动态</view>
+</view>

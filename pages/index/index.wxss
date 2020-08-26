@@ -1,0 +1,34 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.main image,.content {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.content {
+    padding: 10vw 3vw;
+    height: 80vh;
+}
+
+.app-cell {
+    float: left;
+    height: 40vw;
+    width: 40%;
+    margin: 3vw;
+    border-radius: 5px;
+    background: rgb(9,89,167);
+    box-shadow: 10rpx 10rpx 5rpx #CCC;
+    text-align: center;
+    font-size: 50rpx;
+    line-height: 40vw;
+    color: black;
+    background-image: url('http://bpic.588ku.com/back_pic/04/20/53/93582e52886c003.jpg!/fw/260/quality/90/unsharp/true/compress/true');
+    background-size: contain;
+}

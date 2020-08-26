@@ -1,0 +1,38 @@
+<view class="pic">
+    <image mode="aspectFit" src="../../../images/sell_intro_1.png"></image>
+    <view class="txt">
+        手机扫码
+    </view>
+</view>
+<view class="pic">
+    <image mode="aspectFit" src="../../../images/timg1.jpg"></image>
+    <view class="txt">
+        借书准则>
+        <view class="txt1">1、爱护书籍，人人有责</view>
+        <view class="txt1">2、好借好还，再借不难</view>
+        <view class="txt1">3、气有浩然，学无止境</view>
+    </view>
+</view>
+<view class="search-container">
+    <view bindtap="scanBtnOnClick" class="scan-btn">
+        <i> + </i>扫码借书</view>
+    <view bindtap="inputBtn" class="books-search-container">手动输入 ISBN</view>
+    <view class="model" wx:if="{{isShow}}">
+        <view class="content">
+            <view bindtap="cancelBtn" class="cancel">
+                X
+            </view>
+            <view class="title">
+                手动输入条码号
+            </view>
+            <view class="rules">
+                输入13位isbn码，不含-符号
+            </view>
+            <view class="code">
+                <image class="ex-code" src="../../../images/code.jpg"></image>
+                <input bindinput="bindIsbncode" confirmType="search" placeholder="在这输入..." type="text"></input>
+            </view>
+            <button bindtap="makeSure" class="sure">确  认</button>
+        </view>
+    </view>
+</view>

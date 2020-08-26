@@ -1,0 +1,181 @@
+page {
+    height: 100%;
+}
+
+page {
+    background-color: #fff;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.left_menu {
+    float: left;
+    background: #eee;
+    width: auto;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-size: 35rpx;
+}
+
+.left_menu view {
+    padding: 10px 0.5em;
+    text-align: center;
+    color: #999;
+}
+
+.left_menu view.on {
+    background: #fff;
+    color: #000;
+}
+
+.main {
+    position: absolute;
+    right: 50rpx;
+}
+
+.stateApproval .stateBooks {
+    position: relative;
+    right: -20rpx;
+}
+
+.stateApproval .approvalBooks {
+    position: relative;
+    right: -20rpx;
+}
+
+.book_add_view {
+    margin-top: 0px;
+    width: 95%;
+    margin-left: 10rpx;
+    float: right;
+}
+
+.book_add_view form {
+    display: flex;
+    flex-direction: column;
+}
+
+.book_add_view .formItem {
+    display: flex;
+    flex-direction: row;
+    line-height: 35rpx;
+    margin-top: 50rpx;
+    justify-content: center;
+    font-size: 30rpx;
+    align-items: center;
+}
+
+.book_add_view .scan {
+    position: relative;
+    right: 0rpx;
+    width: 1.0em;
+    height: 1.0em;
+}
+
+.book_add_view .label {
+    flex: 2;
+    line-height: 35rpx;
+    font-weight: bold;
+}
+
+.book_add_view .formControl {
+    flex: 5;
+    margin-right: 20rpx;
+    flex-direction: row;
+}
+
+.book_add_view .formControl input {
+    border: 1px solid olive;
+    padding: 2px;
+}
+
+.book_add_view .vBtn_ok {
+    margin-top: 50rpx;
+}
+
+.approvalBooks .vBtn_approval {
+    background-color: goldenrod;
+    width: 150rpx;
+    height: 50rpx;
+    font-size: 35rpx;
+    line-height: 50rpx;
+    font-style: unset;
+    border-radius: 20rpx;
+}
+
+.books {
+    float: left;
+    height: 280rpx;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.book-pic {
+    float: left;
+    height: 130px;
+    width: 100px;
+}
+
+.book-image {
+    width: 90px;
+    height: 280rpx;
+    margin-left: 10px;
+    background: #0099CC;
+    font-size: 25rpx;
+    border-radius: 5px;
+    position: relative;
+}
+
+.book-image text {
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+
+.book-msg {
+    float: left;
+    height: 130px;
+    padding: 5px 0;
+    margin-left: 10px;
+    font-size: 26rpx;
+}
+
+.book-msg view {
+    padding: 10rpx;
+}
+
+.book-name {
+    font-size: 26rpx;
+    color: #0099CC;
+}
+
+.model {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+}
+
+.exitProgram {
+    margin-top: 30vw;
+    width: 450rpx;
+    height: 450rpx;
+    background-color: aquamarine;
+    line-height: 450rpx;
+    text-align: center;
+    border-radius: 225rpx;
+    background-image: url('https://goss.veer.com/creative/vcg/veer/800water/veer-147354045.jpg');
+    font-size: 50rpx;
+    font-weight: bold;
+}

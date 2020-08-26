@@ -1,0 +1,24 @@
+<view class="main-container">
+    <view class="books">
+        <view class="book-pic">
+            <view class="book-image">
+                <text>{{bookMsg.bookname}}</text>
+            </view>
+        </view>
+        <view class="book-msg">
+            <view class="book-name">
+                {{bookMsg.bookname}}
+            </view>
+            <view class="book-author">
+                作者：{{bookMsg.author}}
+            </view>
+            <view class="book-code">
+                编号：{{bookMsg.bookcode}}
+            </view>
+            <view class="book-isbn">
+                ISBN: {{bookMsg.isbncode}}
+            </view>
+        </view>
+    </view>
+    <button bindtap="borrowBtn" class="borrowBtn">我要借书</button>
+</view>

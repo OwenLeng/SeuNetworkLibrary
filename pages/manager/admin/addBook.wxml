@@ -1,0 +1,117 @@
+<scroll-view scrollY class="left_menu">
+    <view bindtap="changeMenuAdd" class="{{menu_cur==1?'on':''}}" data-type="1">添加</view>
+    <view bindtap="changeMenuState" class="{{menu_cur==2?'on':''}}" data-type="2">借阅状态</view>
+    <view bindtap="changeMenuApproval" class="{{menu_cur==3?'on':''}}" data-type="3">审核</view>
+    <view bindtap="changeMenuExit" class="{{menu_cur==4?'on':''}}" data-type="4">退出</view>
+</scroll-view>
+<view class="main">
+    <view class="book_add_view" wx:if="{{menu_cur==1}}">
+        <form bindsubmit="formSubmit">
+            <view class="formItem">
+                <view class="label">图书名称：</view>
+                <view class="formControl">
+                    <input name="bookname" placeholder="请输入图书名称" type="text" value="{{bookname}}"></input>
+                </view>
+            </view>
+            <view class="formItem">
+                <view class="label">作者：</view>
+                <view class="formControl">
+                    <input name="author" placeholder="请输入作者名称" type="text" value="{{author}}"></input>
+                </view>
+            </view>
+            <view class="isbnScan">
+                <view class="formItem">
+                    <view class="label">图书ISBN：</view>
+                    <view class="formControl">
+                        <input name="isbncode" placeholder="请输入ISBN码" type="text" value="{{isbncode}}"></input>
+                    </view>
+                </view>
+            </view>
+            <view class="formItem">
+                <view class="label">出版日期：</view>
+                <view class="formControl">
+                    <input name="Pubdate" placeholder="请输入图书出版日期" type="text" value="{{Pubdate}}"></input>
+                </view>
+            </view>
+            <view class="formItem">
+                <view class="label">图书编号：</view>
+                <view class="formControl">
+                    <input name="bookcode" placeholder="请输入图书编号" type="text" value="{{bookcode}}"></input>
+                </view>
+            </view>
+            <view class="formItem">
+                <view class="label">出版社：</view>
+                <view class="formControl">
+                    <input name="Pubcomp" placeholder="请输入图书出版社" type="text" value="{{Pubcomp}}"></input>
+                </view>
+            </view>
+            <view>
+                <button class="vBtn_ok" disabled="{{disabled}}" formType="submit">添加图书</button>
+            </view>
+        </form>
+        <view>
+            <button bindtap="exitBtnOnClick" class="vBtn_ok" disabled="{{disabled}}">退出登录</button>
+        </view>
+    </view>
+    <view class="stateApproval">
+        <view class="stateBooks" wx:if="{{isShowState}}">
+            <view class="main-container" wx:if="{{menu_cur==2}}">
+                <view bindtap="bookDetail" class="books" data-msg="{{item}}" wx:for="{{booklist}}" wx:key="index">
+                    <view class="book-pic">
+                        <view class="book-image">
+                            <text>{{item.bookname}}</text>
+                        </view>
+                    </view>
+                    <view class="book-msg">
+                        <view class="book-name" id="book-name">
+                                    {{item.bookname}}
+                                </view>
+                        <view class="book-author">
+                                    作者：{{item.author}}
+                                </view>
+                        <view class="book-isbn">
+                                    ISBN: {{item.isbncode}}
+                                </view>
+                        <view class="book-borrow">
+                                    借书人: {{item.userid}}
+                                </view>
+                        <view class="book-code">
+                                    借书日期：{{item.BorrowTime}} 
+                                </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="approvalBooks" wx:if="{{isShowApproval}}">
+            <view class="main-container" wx:if="{{menu_cur==3}}">
+                <view bindtap="bookDetail" class="books" data-msg="{{item}}" wx:for="{{booklist}}" wx:key="index">
+                    <view class="book-pic">
+                        <view class="book-image">
+                            <text>{{item.bookname}}</text>
+                        </view>
+                    </view>
+                    <view class="book-msg">
+                        <view class="book-author">
+                                            作者：{{item.author}}
+                                        </view>
+                        <view class="book-isbn">
+                                            ISBN: {{item.isbncode}}
+                                        </view>
+                        <view class="book-borrow">
+                                            还书人: {{item.userid}}
+                                        </view>
+                        <view class="return-time">
+                                            还书时间：{{item.returnTime}}
+                                        </view>
+                        <view>
+                            <button bindtap="approvalBook" class="vBtn_approval" data-index="{{index}}" data-item="{{item}}" disabled="{{disabled}}">审核</button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="main-container" wx:if="{{menu_cur==4}}">
+        <view bindtap="exitBtnOnClick" class="exitProgram">退出程序</view>
+    </view>
+</view>
